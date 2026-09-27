@@ -11,7 +11,7 @@ record a planned item as done.
 |---|---|---|
 | 0 Bootstrap | done | commit cb89973; sample 16 OK; engine 12 OK (4 skipped, symlinks); stdlib-only: OK |
 | 5a Probe and adapters | done | util.py, routes.py, adapters.json, kind-buckets.json, route-matrix.json committed |
-| 5b-1 Hook path | not started | |
+| 5b-1 Hook path | done | adapters.py, spec.py, policy.py; tests 116 pass |
 | 5b-2 Audit and lifecycle | not started | |
 | 5b-3 Validator, scoring, replay | not started | |
 | Engine freeze | not started | |
