@@ -96,7 +96,8 @@ class TestExclCreate(unittest.TestCase):
             p = os.path.join(d, "lock")
             self.assertTrue(excl_create(p, b"data"))
             self.assertFalse(excl_create(p))
-            self.assertEqual(open(p, "rb").read(), b"data")
+            with open(p, "rb") as fh:
+                self.assertEqual(fh.read(), b"data")
 
 
 class TestLock(unittest.TestCase):
