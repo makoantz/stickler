@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {"hooks": [{"type": "command", "command": "PYTHONPATH=__TARGET__/.stickler/engine python3 -m stickler.stickler_hook", "timeout": 30}]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "PYTHONPATH=__TARGET__/.stickler/engine python3 -m stickler.stickler_hook", "timeout": 30}]}
+    ],
+    "PreToolUse": [
+      {"hooks": [{"type": "command", "command": "PYTHONPATH=__TARGET__/.stickler/engine python3 -m stickler.stickler_hook", "timeout": 5}]}
+    ],
+    "PostToolUse": [
+      {"hooks": [{"type": "command", "command": "PYTHONPATH=__TARGET__/.stickler/engine python3 -m stickler.stickler_hook", "timeout": 5}]}
+    ],
+    "Stop": [
+      {"hooks": [{"type": "command", "command": "PYTHONPATH=__TARGET__/.stickler/engine python3 -m stickler.stickler_hook", "timeout": 30}]}
+    ]
+  }
+}

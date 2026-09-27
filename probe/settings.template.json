@@ -1,0 +1,88 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py log",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py log",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py log",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "^write_file$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py control",
+            "timeout": 3
+          }
+        ]
+      },
+      {
+        "matcher": "^execute_command$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py control",
+            "timeout": 3
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py control_any",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py log",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 __RUN_ROOT__/probe/probe_hook.py log",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

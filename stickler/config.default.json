@@ -1,0 +1,19 @@
+{
+  "config_version": 1,
+  "on_error": "allow",
+  "missing_path_field": "block",
+  "control_globs": [".bob/**", "stickler/**"],
+  "engine_owned_globs": [".stickler/**"],
+  "audit": {
+    "include_ignored": [".env", "**/.env", "local/**"],
+    "blob_max_bytes": 1048576
+  },
+  "limits": {
+    "pre_tool_regex_deadline_ms": 1500,
+    "audit_regex_deadline_ms": 20000,
+    "max_command_bytes": 65536,
+    "max_patterns": 50,
+    "max_pattern_len": 200,
+    "screen_deadline_ms": 100
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "adapter_version": 1,
+  "status": "PROVISIONAL. Only the two tools named in IBM's docs. Stage 5a replaces this with stickler/adapters.json built from results/hook-surface.json.",
+  "confirmed_by_probe": null,
+  "tools": {
+    "write_file": {"operation": "write", "paths": ["path"]},
+    "execute_command": {"operation": "execute", "command": "command"}
+  }
+}
