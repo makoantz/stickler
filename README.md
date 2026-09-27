@@ -14,7 +14,10 @@ and the build instructions are in `docs/IMPLEMENTATION_GUIDE.md`.
 
 ## Results
 
-Not yet available. See `results/RESULTS.md` when it exists.
+**Partial deliverable, credit-exhausted.** See `results/RESULTS.md`: every
+hypothesis (H1–H5) is reported inconclusive because no Bob probe, compile, or
+live session has run yet. The engine (D3) is complete and unit-tested; the
+experiment itself has not started.
 
 ## WSL development environment
 

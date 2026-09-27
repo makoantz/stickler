@@ -26,6 +26,13 @@ record a planned item as done.
 | Artifact | SHA-256 | Recorded (UTC) | External record |
 |---|---|---|---|
 
+### 2026-09-27 Partial RESULTS.md (owner + Claude)
+- Owner confirmed Bob's Bobcoin balance is exhausted; no probe, compile, or live session will run in this cycle. Decision: publish and submit the partial deliverable per SOW §10 rather than wait.
+- Wrote `results/RESULTS.md`: H1–H5 all reported inconclusive (each at n = 0 or "Eligible = 0" / "0 of 9 tested", matching the SOW's own inconclusive thresholds), acceptance criteria A1–A10 scored against actual repo state (A1 and A9 met; A2/A2′/A3/A4 not applicable; A5, A6, A10 not met; A7 met as a recorded negative result; A8 is the document itself).
+- Owner has screen recordings of the Bob build sessions (stages 0–5b-3) but no footage of Stickler being probed, compiled, or run live, and no per-stage Bobcoin screenshots were filed in `bob_sessions/`.
+- Updated README's Results section to point at the partial file instead of "not yet available".
+- Next action (if credits become available later): run the Task 0 probe first (cheapest stage, §10), since every other outstanding item is blocked on its frozen output.
+
 ## Updates
 
 ### 2026-09-27 GitHub push and 5b-3 verification (owner + Claude)
