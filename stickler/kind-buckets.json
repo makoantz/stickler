@@ -1,0 +1,11 @@
+{
+  "adapters_sha256": "52134523f3024f6a83a30b0ffa8ac562525511fba592a0638a7ada85edc51f26",
+  "kind_buckets": {
+    "allow_paths_only": "block",
+    "deny_command": "block",
+    "deny_diff_pattern": "audit",
+    "deny_path": "block",
+    "forbid_file_deletion": "audit",
+    "require_paired_change": "audit"
+  }
+}

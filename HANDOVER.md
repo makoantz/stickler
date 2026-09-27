@@ -10,7 +10,7 @@ record a planned item as done.
 | Stage | Status | Evidence |
 |---|---|---|
 | 0 Bootstrap | done | commit cb89973; sample 16 OK; engine 12 OK (4 skipped, symlinks); stdlib-only: OK |
-| 5a Probe and adapters | not started | |
+| 5a Probe and adapters | done | util.py, routes.py, adapters.json, kind-buckets.json, route-matrix.json committed |
 | 5b-1 Hook path | not started | |
 | 5b-2 Audit and lifecycle | not started | |
 | 5b-3 Validator, scoring, replay | not started | |
@@ -35,3 +35,11 @@ record a planned item as done.
 - `scripts/check_stdlib.py` excluded `.venv/` (Windows-only venv not in the Linux-authored skip list). Fixed the script; stdlib-only: OK.
 - Both fixes committed together with stage-0 entry.
 - Next action: owner runs probe (Stage 5a) or proceeds directly to Bob task 5a if probe data is already available.
+
+### 2026-09-27 Stage 5a (Bob)
+- Wrote `stickler/util.py` (all §5.1 functions), `stickler/routes.py` (load_adapters, route_matrix, kind_buckets, CLI).
+- Wrote provisional `stickler/adapters.json` with 6 Bob tools (write_file, read_file, execute_command, apply_diff, insert_content, search_and_replace); `confirmed_by_probe: null` until probe runs.
+- Ran `python3 -m stickler.routes`: deny_path block, allow_paths_only block, forbid_file_deletion audit, deny_command block, require_paired_change audit, deny_diff_pattern audit.
+- Tests: 55 passed, 4 skipped (Windows symlink), 0 failed. stdlib-only: OK.
+- Deviations: adapters.json is provisional (probe not yet run). forbid_file_deletion=audit because no delete tool with paths is in the adapter set yet.
+- Next: Stage 5b-1 (adapters.py, spec.py, policy.py).

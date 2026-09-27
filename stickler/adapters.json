@@ -1,0 +1,31 @@
+{
+  "adapter_version": 1,
+  "confirmed_by_probe": null,
+  "tools": {
+    "write_file": {
+      "operation": "write",
+      "paths": ["path"]
+    },
+    "read_file": {
+      "operation": "read",
+      "paths": ["path"]
+    },
+    "execute_command": {
+      "operation": "execute",
+      "command": "command",
+      "cwd": "cwd"
+    },
+    "apply_diff": {
+      "operation": "write",
+      "paths": ["path"]
+    },
+    "insert_content": {
+      "operation": "write",
+      "paths": ["path"]
+    },
+    "search_and_replace": {
+      "operation": "write",
+      "paths": ["path"]
+    }
+  }
+}

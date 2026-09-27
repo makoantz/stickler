@@ -1,0 +1,50 @@
+{
+  "adapters_sha256": "52134523f3024f6a83a30b0ffa8ac562525511fba592a0638a7ada85edc51f26",
+  "matrix": {
+    "allow_paths_only": {
+      "apply_diff": {
+        "reason": "write with paths field",
+        "status": "supported"
+      },
+      "insert_content": {
+        "reason": "write with paths field",
+        "status": "supported"
+      },
+      "search_and_replace": {
+        "reason": "write with paths field",
+        "status": "supported"
+      },
+      "write_file": {
+        "reason": "write with paths field",
+        "status": "supported"
+      }
+    },
+    "deny_command": {
+      "execute_command": {
+        "reason": "execute with command field",
+        "status": "supported"
+      }
+    },
+    "deny_diff_pattern": {},
+    "deny_path": {
+      "apply_diff": {
+        "reason": "write with paths field",
+        "status": "supported"
+      },
+      "insert_content": {
+        "reason": "write with paths field",
+        "status": "supported"
+      },
+      "search_and_replace": {
+        "reason": "write with paths field",
+        "status": "supported"
+      },
+      "write_file": {
+        "reason": "write with paths field",
+        "status": "supported"
+      }
+    },
+    "forbid_file_deletion": {},
+    "require_paired_change": {}
+  }
+}
