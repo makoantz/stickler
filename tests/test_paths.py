@@ -6,8 +6,23 @@ import unittest
 from stickler.paths import find_root, repo_paths, safe_session_id
 
 
+def _symlinks_available():
+    """Return True if unprivileged symlinks work on this platform."""
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            os.symlink(os.path.join(d, "src"), os.path.join(d, "lnk"))
+        return True
+    except (OSError, NotImplementedError):
+        return False
+
+
+_SYMLINKS = _symlinks_available()
+
+
 class RepoPathsTest(unittest.TestCase):
     def setUp(self):
+        if not _SYMLINKS:
+            self.skipTest("symlinks require elevated privileges or Developer Mode on this system")
         self.tmp = tempfile.TemporaryDirectory()
         d = self.tmp.name
         self.root = os.path.join(d, "repo")

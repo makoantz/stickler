@@ -9,7 +9,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 LOCAL = {"stickler", "shelfkeep", "tests", "probe"}
 bad = []
 for path in sorted(ROOT.rglob("*.py")):
-    if any(part in {".git", "results", "__pycache__"} for part in path.relative_to(ROOT).parts):
+    if any(part in {".git", "results", "__pycache__", ".venv"} for part in path.relative_to(ROOT).parts):
         continue
     tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
     for node in ast.walk(tree):
